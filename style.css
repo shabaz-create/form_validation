@@ -34,7 +34,11 @@ input:hover{
     gap: 5px
     
 }
-
+/* input[type="checkbox"]{
+    margin-left:-100px;
+    height:20px;
+    width:10px;
+} */
 button{
     width:100px;
     height: 30px;
@@ -51,3 +55,8 @@ button:hover{
 li{
     font-size:12px;
 }
+
+.hide{
+    display:none;
+}
+

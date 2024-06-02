@@ -8,38 +8,48 @@
 </head>
 <body>
     <h1>Registration</h1>
-    <form>
+    <form class="form-container">
         <div class="form-elements">
             <label for="firstName">First Name:</label>
-            <input id="firstName" placeholder="Enter Your First Name">
-            <span><li class="">Field cannot be empty</li></span>
-            <span><li class="">First Name Cannot Be Numbers</li></span>
+            <input id="firstName" placeholder="Enter Your First Name" data-key="fName">
+            <span><li class="empty-field hide">First Name  cannot be empty</li></span>
+            <span><li class="error-message hide">First Name Cannot Be Numbers</li></span>
         </div>
         <div class="form-elements">
             <label for="lastName"> Last Name:</label>
-            <input id="lastName" placeholder="Enter Your Last Name">
-            <span><li class="">Field cannot be empty</li></span>
-            <span><li class="">Last Name Cannot Be Numbers</li></span>
+            <input id="lastName" placeholder="Enter Your Last Name" data-key="lName">
+            <span><li class=" empty-field hide">Last Name cannot be empty</li></span>
+            <span><li class="hide error-message">Last Name Cannot Be Numbers</li></span>
         </div>
         <div class="form-elements">
             <label for="dob"> Date of Birth:</label>
-            <input id="dob" placeholder="Enter Your Last Name" type="date" max="2007-01-01">
-            <span><li class="">Field cannot be empty</li></span>
-            <span><li class="">You must be Born before 2007</li></span>
+            <input id="dob" placeholder="Enter Your Last Name" type="date" max="2007-01-01" data-key="date">
+            <span><li class=" empty-field hide">Date cannot be empty</li></span>
+            <span><li class="hide error-message">You must be Born before 2007</li></span>
         </div>
         <div class="form-elements">
             <label for="email"> Email:</label>
-            <input id="email" placeholder="Enter Your Email" type="email">
-            <span><li class="">Field cannot be empty</li></span>
-            <span><li class="">This is not an email</li></span>
+            <input id="email"  placeholder="Enter Your Email" type="email" data-key="email">
+            <span><li class=" empty-field hide">Email cannot be empty</li></span>
+            <span><li class="hide error-message">This is not an email</li></span>
         </div>
         <div class="form-elements" id="password-field">
             <label for="password"> Password:</label>
-            <input id="password" placeholder="Enter Your password" type="password">
-            <span><input id="password-visibility" type="checkbox"></span>
-            
+            <!-- <div id="password-container"> -->
+            <input  id="password" placeholder="Enter Your password" type="password" data-key="password">
+            <input id="password-visibility" type="checkbox">
+            <!-- </div> -->
+            <span  class=" empty-field hide"><li>Password cannot be empty</li></span>
+            <span class="hide error-message">
+                            <li>Password Must contain at least one Upper Case Letter</li>
+                            <li>Password Must contain at least one Lower Case Letter</li>
+                            <li>Password Must contain at least one Special Character</li>
+                            <li>Password must contain at least 8 characters</li>
+                            <!-- <li>Password must contain at most 20 characters</li> -->
+                            <li>Password must contain at least one digit</li>
+            </span>
         </div>
-        <button id="register">Register</button>
+        <button id="register" type="submit">Register</button>
     </form>
     <script type="module" src="/index.js"></script>
 </body>
