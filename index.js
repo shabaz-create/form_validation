@@ -50,7 +50,7 @@ register.addEventListener("click",(event)=>{
     // console.log(firstName,lastName,date,email,password);
     
     if(firstName){
-
+        emptyField[0].classList.add("hide");
         if(!(nameRegex).test(firstName)){
             errorMessage[0].classList.remove("hide");
         }else{
@@ -63,7 +63,7 @@ register.addEventListener("click",(event)=>{
 
 
     if(lastName){
-
+        emptyField[1].classList.add("hide");
         if(!(nameRegex).test(lastName)){
             errorMessage[1].classList.remove("hide");
         }else{
@@ -86,7 +86,7 @@ register.addEventListener("click",(event)=>{
 
 
     if(email){
-
+        emptyField[3].classList.add("hide");
         if(!(emailRegex).test(email)){
             errorMessage[3].classList.remove("hide");
         }else{
@@ -99,7 +99,7 @@ register.addEventListener("click",(event)=>{
 
 
     if(password){
-
+        emptyField[4].classList.add("hide");
         if(!(passwordRegex).test(password)){
             errorMessage[4].classList.remove("hide");
         }else{
