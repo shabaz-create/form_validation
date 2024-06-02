@@ -3,6 +3,8 @@ let formContainer=document.querySelector(".form-container");
 let emptyField=document.querySelectorAll(".empty-field");
 // console.log(emptyField[0].classList)
 let errorMessage=document.querySelectorAll(".error-message");
+let passwordField=document.getElementById("password");
+let checkbox=document.getElementById("password-visibility");
 // console.log(errorMessage[0].classList)
 let firstName, lastName, email,date,password;
 
@@ -115,5 +117,17 @@ register.addEventListener("click",(event)=>{
     console.log("success")
     event.preventDefault();
     window.location.href="/success.html"
+    }
+})
+
+
+
+checkbox.addEventListener("click",(event)=>{
+    event.preventDefault();
+    if(passwordField.type=="password"){
+        passwordField.setAttribute("type","text");
+    }else{
+        passwordField.setAttribute("type","password");
+        
     }
 })
