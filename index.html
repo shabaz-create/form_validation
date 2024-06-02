@@ -12,24 +12,35 @@
         <div class="form-elements">
             <label for="firstName">First Name:</label>
             <input id="firstName" placeholder="Enter Your First Name">
+            <span><li class="">Field cannot be empty</li></span>
+            <span><li class="">First Name Cannot Be Numbers</li></span>
         </div>
         <div class="form-elements">
             <label for="lastName"> Last Name:</label>
             <input id="lastName" placeholder="Enter Your Last Name">
+            <span><li class="">Field cannot be empty</li></span>
+            <span><li class="">Last Name Cannot Be Numbers</li></span>
         </div>
         <div class="form-elements">
             <label for="dob"> Date of Birth:</label>
             <input id="dob" placeholder="Enter Your Last Name" type="date" max="2007-01-01">
+            <span><li class="">Field cannot be empty</li></span>
+            <span><li class="">You must be Born before 2007</li></span>
         </div>
         <div class="form-elements">
             <label for="email"> Email:</label>
             <input id="email" placeholder="Enter Your Email" type="email">
+            <span><li class="">Field cannot be empty</li></span>
+            <span><li class="">This is not an email</li></span>
         </div>
-        <div class="form-elements">
+        <div class="form-elements" id="password-field">
             <label for="password"> Password:</label>
             <input id="password" placeholder="Enter Your password" type="password">
+            <span><input id="password-visibility" type="checkbox"></span>
+            
         </div>
-        <button>Register</button>
+        <button id="register">Register</button>
     </form>
+    <script type="module" src="/index.js"></script>
 </body>
 </html>
