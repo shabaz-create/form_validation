@@ -15,7 +15,7 @@ let  passwordRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{8,}$/i;
 
     
 
-// console.log((password).test("$ha1376baZ"));
+// extracting input data
 formContainer.addEventListener("input",(event)=>{
     event.preventDefault();
     let key=event.target.dataset.key;
@@ -44,7 +44,7 @@ formContainer.addEventListener("input",(event)=>{
 })
 
 
-//on success
+//Logic to check if every field is filled appropriately
 register.addEventListener("click",(event)=>{
     event.preventDefault();
     // console.log(firstName,lastName,date,email,password);
@@ -112,7 +112,7 @@ register.addEventListener("click",(event)=>{
 
 
 
-
+    //if every field is filled appropriately continue to success page
     if(fFlag && lFlag && dFlag && eFlag && pFlag){
     console.log("success")
     event.preventDefault();
@@ -121,7 +121,7 @@ register.addEventListener("click",(event)=>{
 })
 
 
-
+//adding toggle functionality for password visibility
 checkbox.addEventListener("click",(event)=>{
     event.preventDefault();
     if(passwordField.type=="password"){
